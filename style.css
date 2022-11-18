@@ -1,0 +1,27 @@
+body {
+    background-image: url(./image/Weather\ image\ -\ Copy.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-size: 50px;
+    color: white;
+}
+
+#card {
+    font-size: 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: transparent;
+    border: transparent;
+    border-radius: 10px;
+    padding: 10px;
+    margin: auto;
+    width: 433px;
+    height: auto;
+      }
+      
