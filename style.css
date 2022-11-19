@@ -13,6 +13,7 @@ h1 {display: flex;
 #card {
     background:rgba(0,0,0,0.5);;
     font: 50px;
+    font: bold;
      display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -25,3 +26,11 @@ h1 {display: flex;
     width: 433px;
     height: auto;
   }
+
+  #image {
+    border-radius: 10px;
+    margin: auto;
+    width: 433px;
+    height: auto;
+  }
+

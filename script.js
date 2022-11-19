@@ -6,6 +6,7 @@ const searchButton = document.getElementById("button");
 const city = document.getElementById("city");
 const card = document.getElementById("card");
 const feelsLike = document.getElementById("feelsLike");
+const image = document.getElementById("image");
 
 
 card.addEventListener("submit", (event) => {
@@ -13,6 +14,8 @@ card.addEventListener("submit", (event) => {
   const cityname = city.value;
   getData(cityname);
 });
+
+
 
 function getData(cityname) {
   fetch(
@@ -31,13 +34,19 @@ function getData(cityname) {
       return resolve.json();
     })
     .then((data) => {
-      console.log(data)
+      console.log(data);
       currentCity.textContent = `Currently in ${data.name}`;
       feedBack.textContent = `Visibilty: ${data.weather[0].description}`;
       currentTemp.textContent = `The current temp is ${data.main.temp} °Degrees `;
       feelsLike.textContent = `Feels like ${data.main.feels_like} °Degrees`;
-
+      const searchTerm = `${data.weather[0].description} sky`;
+      return fetch(`https://api.giphy.com/v1/gifs/translate?api_key=TD1NlYWlPVjsW9o6OosI5S1avSEuISUX&s=${searchTerm}`)
     })
+    .then((resolve) => {
+      return resolve.json()
+  }).then((res) => {
+    image.src = res.data.images.original.url;
+  })
     .catch((error) => {
       console.error = error.message;
     });
