@@ -1,13 +1,13 @@
 body {
-    background-image: url(./image/Weather\ image\ -\ Copy.jpeg);
+    background-image: url(./image/clouds.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 h1 {display: flex;
     justify-content: center;
-    font-size: 50px;
-    color: white;
+    font-size: 75px;
+    color: whitesmoke;
 }
 
 #card {
@@ -33,4 +33,3 @@ h1 {display: flex;
     width: 433px;
     height: auto;
   }
-
